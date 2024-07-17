@@ -1,0 +1,35 @@
+[manager]
+show_hidden    = true
+
+[opener]
+execute = [
+	{ run = '$@',                desc = "Execute", block = true, for = "linux" },
+]
+code = [
+	{ run = 'code $@',           desc = "VS Code", for = "linux" },
+]
+less = [
+	{ run = 'less $@',           desc = "less", block = true, for = "linux" },
+]
+
+[open]
+rules = [
+	{ name = "*/", use = [ "open", "edit", "reveal" ] },
+
+	{ name = "*.fish", use = [ "code", "execute", "open", "edit", "reveal" ] },
+	{ name = "*.py",   use = [ "code", "execute", "open", "edit", "reveal" ] },
+	{ name = "*.sh",   use = [ "code", "execute", "open", "edit", "reveal" ] },
+
+	{ mime = "text/*",          use = [ "open", "edit", "reveal" ] },
+	{ mime = "image/*",         use = [ "open", "reveal" ] },
+	{ mime = "{audio,video}/*", use = [ "open", "play", "reveal" ] },
+	{ mime = "inode/x-empty",   use = [ "open", "edit", "reveal" ] },
+
+	{ mime = "application/*zip", use = [ "extract", "open", "reveal" ] },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "open", "reveal" ] },
+
+	{ mime = "application/json", use = [ "open", "edit", "reveal" ] },
+	{ mime = "*/javascript",     use = [ "open", "edit", "reveal" ] },
+
+	{ mime = "*", use = [ "open", "reveal", "less" ] },
+]

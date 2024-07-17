@@ -1,0 +1,19 @@
+#
+# ~/.bash_profile
+#
+
+# fcitx 5
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
+
+export VISUAL=code
+
+export PYTHONPATH=~/python_lib:$PYTHONPATH
+
+export PATH=~/roaming_linux_daniel/path:$PATH
+
+echo 'Starting SSH agent...'
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github_cudan_linux
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
