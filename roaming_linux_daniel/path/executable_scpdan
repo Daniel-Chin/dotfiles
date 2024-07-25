@@ -1,0 +1,5 @@
+#!/usr/bin/fish
+
+echo $1
+echo $2
+# scp -r -i ~/.ssh/nyush_hpc_rsa nq285@hpc.shanghai.nyu.edu:$1 $2
