@@ -4,3 +4,8 @@ run = '''
     shell "$@" --block --confirm
 '''
 desc = "Execute"
+
+[[manager.prepend_keymap]]
+on = "<C-r>"
+run = "refresh"
+desc = "Refresh"
