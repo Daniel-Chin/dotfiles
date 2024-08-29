@@ -9,3 +9,9 @@ desc = "Execute"
 on = "<C-r>"
 run = "refresh"
 desc = "Refresh"
+
+[[manager.prepend_keymap]]
+on = ["<C-n>"]
+run = '''
+	shell 'dragon-drop -a -x "$@"' --confirm
+'''
