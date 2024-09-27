@@ -206,4 +206,6 @@ alias pause 'read -P "Press any key to continue... "'
 
 bind \co "yy; commandline -f repaint"
 
+alias sudopy 'sudo env PYTHONPATH=(echo $PYTHONPATH) (which python)'
+
 # }
