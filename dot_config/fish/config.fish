@@ -208,4 +208,12 @@ bind \co "yy; commandline -f repaint"
 
 alias sudopy 'sudo env PYTHONPATH=(echo $PYTHONPATH | tr " " ":") (which python)'
 
+# the default {
+# npm config set prefix '/usr'
+# }
+# change npm to ~ {
+npm config set prefix '~/.npm-global'
+set -U fish_user_paths $fish_user_paths ~/.npm-global/bin
+# }
+
 # }
