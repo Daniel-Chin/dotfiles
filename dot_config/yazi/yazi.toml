@@ -19,6 +19,8 @@ rules = [
 	{ name = "*.fish", use = [ "code", "execute", "open", "edit", "reveal" ] },
 	{ name = "*.py",   use = [ "code", "execute", "open", "edit", "reveal" ] },
 	{ name = "*.sh",   use = [ "code", "execute", "open", "edit", "reveal" ] },
+	
+	{ name = "*.xml",  use = [ "code", "open", "edit", "reveal" ] },
 
 	{ mime = "text/*",          use = [ "open", "edit", "reveal" ] },
 	{ mime = "image/*",         use = [ "open", "reveal" ] },
