@@ -6,14 +6,23 @@ import time
 
 SERVICE_NAME = 'expressvpn'
 
-def waitForService(timeout=10):
-    for _ in range(timeout):
+def waitForService(keyword: str, timeout: int = 10):
+    ddl = time.time() + timeout
+
+    def check():
         result = subprocess.run([
-            'systemctl', 'is-active', SERVICE_NAME, 
+            'systemctl', f'is-{keyword}', SERVICE_NAME, 
         ], capture_output=True, text=True, check=True)
-        if 'active' in result.stdout:
+        return keyword in result.stdout
+    
+    wait = 0.1
+    while time.time() < ddl:
+        if check():
             return
-        time.sleep(1)
+        time.sleep(wait)
+        wait *= 2
+    if check():
+        return
     raise TimeoutError()
 
 def main():
@@ -24,7 +33,11 @@ def main():
     subprocess.run([
         'systemctl', 'restart', SERVICE_NAME, 
     ], check=True)
-    waitForService()
+    waitForService('active')
+    subprocess.run([
+        'systemctl', 'enable', SERVICE_NAME, 
+    ], check=True)
+    waitForService('enabled')
     subprocess.run(['expressvpn', 'connect', 'smart'], check=True)
     try:
         while True:
