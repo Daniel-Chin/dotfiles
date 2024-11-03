@@ -3,13 +3,13 @@ show_hidden    = false
 
 [opener]
 execute = [
-	{ run = '$@',                desc = "Execute", block = true, for = "linux" },
+	{ run = '"$@"',                desc = "Execute", block = true, for = "linux" },
 ]
 code = [
-	{ run = 'code $@',           desc = "VS Code", for = "linux" },
+	{ run = 'code "$@"',           desc = "VS Code", for = "linux" },
 ]
 less = [
-	{ run = 'less $@',           desc = "less", block = true, for = "linux" },
+	{ run = 'less "$@"',           desc = "less", block = true, for = "linux" },
 ]
 
 [open]
