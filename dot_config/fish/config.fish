@@ -176,15 +176,15 @@ set -gx CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/anaconda/bin/conda
-    eval /opt/anaconda/bin/conda "shell.fish" "hook" $argv | source
-else
+# if test -f /opt/anaconda/bin/conda
+#     eval /opt/anaconda/bin/conda "shell.fish" "hook" $argv | source
+# else
     if test -f "/opt/anaconda/etc/fish/conf.d/conda.fish"
         . "/opt/anaconda/etc/fish/conf.d/conda.fish"
     else
         set -x PATH "/opt/anaconda/bin" $PATH
     end
-end
+# end
 # <<< conda initialize <<<
 
 function yy
@@ -198,7 +198,9 @@ end
 
 # Daniel specials {
 
+echo "activating ground..."
 conda activate ground
+echo "ok"
 
 alias record '/usr/bin/ffmpeg -f alsa -i default'
 
