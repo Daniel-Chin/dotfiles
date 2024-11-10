@@ -97,3 +97,11 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+setfont /usr/share/kbd/consolefonts/dan/dejavu_sans_mono_24x48_ascii.psf
+
+# set terminal size
+dimensions=$(cat /sys/class/graphics/fb0/virtual_size)
+width=$(echo $dimensions | cut -d',' -f1)
+height=$(echo $dimensions | cut -d',' -f2)
+fbset -xres $width -yres $height
