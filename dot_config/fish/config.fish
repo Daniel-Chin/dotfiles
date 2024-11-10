@@ -198,9 +198,9 @@ end
 
 # Daniel specials {
 
-echo "activating ground..."
-conda activate ground
-echo "ok"
+# echo "activating ground..."
+# conda activate ground
+# echo "ok"
 
 alias record '/usr/bin/ffmpeg -f alsa -i default'
 
