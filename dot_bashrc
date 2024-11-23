@@ -83,6 +83,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
+echo conda initialize...
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -97,6 +98,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+echo ok
 
 setfont /usr/share/kbd/consolefonts/dan/dejavu_sans_mono_24x48_ascii.psf
 
