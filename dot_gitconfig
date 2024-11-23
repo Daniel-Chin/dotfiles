@@ -5,6 +5,7 @@
 	email = daniel.chin@nyu.edu
 [core]
 	autocrlf = input
+	editor = vim
 [init]
 	defaultBranch = main
 [url "ssh://git@github.com/"]
