@@ -15,5 +15,6 @@ export PATH=~/roaming_linux_daniel/path:$PATH
 echo 'Starting SSH agent...'
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github_cudan_linux
+echo 'ok'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
