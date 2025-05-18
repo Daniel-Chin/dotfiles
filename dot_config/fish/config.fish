@@ -219,3 +219,5 @@ set -U fish_user_paths $fish_user_paths ~/.npm-global/bin
 # }
 
 # }
+
+alias pixel-color 'wl-paste --type image/png | convert png:- -format "%[pixel:u.p{0,0}]" info:'
