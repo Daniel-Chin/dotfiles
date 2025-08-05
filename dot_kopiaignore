@@ -1,0 +1,39 @@
+**/.venv/
+**/node_modules/
+
+/home/dan/.config/Code/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/
+/home/dan/.config/Code/CachedExtensionVSIXs/
+/home/dan/steam_cmd_dir/
+/home/dan/Documents/WeChat_Data/
+/home/dan/.vscode/extensions/
+/home/dan/.espressif/
+/home/dan/esp/
+/home/dan/.firedragon/
+/home/dan/.npm/_cacache/
+/home/dan/programs/
+/home/dan/.vscode-oss/extensions/
+
+# <dot files>
+
+# general rule
+/.*/
+
+# very large dot dirs, can overlap with the general rule
+/.conda/
+/.mozilla/
+/.local/share/Steam/
+
+# should not sync
+/.cache/
+/.ssh/
+
+# exceptions
+!/.config/
+!.kopiaignore
+
+# </dot files>
+
+# general rule
+# we still backup repos, just not the history of repos. I fear recursive backup  
+**/.git/
+
