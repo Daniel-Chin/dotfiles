@@ -174,19 +174,6 @@ zoxide init fish | source
 
 set -gx CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# if test -f /opt/anaconda/bin/conda
-#     eval /opt/anaconda/bin/conda "shell.fish" "hook" $argv | source
-# else
-    if test -f "/opt/anaconda/etc/fish/conf.d/conda.fish"
-        . "/opt/anaconda/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/anaconda/bin" $PATH
-    end
-# end
-# <<< conda initialize <<<
-
 function yy
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"
@@ -221,3 +208,6 @@ set -U fish_user_paths $fish_user_paths ~/.npm-global/bin
 # }
 
 alias pixel-color 'wl-paste --type image/png | convert png:- -format "%[pixel:u.p{0,0}]" info:'
+
+# uv
+fish_add_path "/home/dan/.local/bin"
