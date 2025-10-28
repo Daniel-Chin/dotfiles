@@ -211,3 +211,5 @@ alias pixel-color 'wl-paste --type image/png | convert png:- -format "%[pixel:u.
 
 # uv
 fish_add_path "/home/dan/.local/bin"
+
+alias uv-daniel-run 'uv run --no-default-groups --group daniel'
