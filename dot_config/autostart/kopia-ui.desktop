@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/opt/KopiaUI/kopia-ui
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=KopiaUI
+
