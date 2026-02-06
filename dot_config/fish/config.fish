@@ -38,9 +38,9 @@ end
 
 
 ## Starship prompt
-if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
+# if status --is-interactive
+#    source ("/usr/bin/starship" init fish --print-full-init | psub)
+# end
 
 
 ## Advanced command-not-found hook
