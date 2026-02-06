@@ -1,3 +1,0 @@
-#!/bin/fish
-
-fluidsynth -a alsa -m alsa_seq -l -i ~/roaming_linux_daniel/soundfonts/Yamaha-Grand-Lite-v2.0.sf2 $argv

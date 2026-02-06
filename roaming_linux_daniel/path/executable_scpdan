@@ -1,3 +1,0 @@
-#!/usr/bin/fish
-
-scp -r -i ~/.ssh/nyush_hpc_rsa nq285@hpc.shanghai.nyu.edu:$argv[1] $argv[2]
