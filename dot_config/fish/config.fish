@@ -170,6 +170,8 @@ if status --is-interactive && type -q fastfetch
   fastfetch --config neofetch.jsonc
 end
 
+# Daniel Chin Custom >>>>>>
+
 zoxide init fish | source
 
 set -gx CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
@@ -183,17 +185,9 @@ function yy
 	rm -f -- "$tmp"
 end
 
-# Daniel specials {
-
-# echo "activating ground..."
-# conda activate ground
-# echo "ok"
-
 alias record '/usr/bin/ffmpeg -f alsa -i default'
 
 alias pause 'read -P "Press any key to continue... "'
-
-bind \co "yy; commandline -f repaint"
 
 alias sudopy 'sudo env PYTHONPATH=(echo $PYTHONPATH | tr " " ":") (which python)'
 
@@ -205,11 +199,18 @@ npm config set prefix '~/.npm-global'
 set -U fish_user_paths $fish_user_paths ~/.npm-global/bin
 # }
 
-# }
-
 alias pixel-color 'wl-paste --type image/png | convert png:- -format "%[pixel:u.p{0,0}]" info:'
 
 # uv
 fish_add_path "/home/dan/.local/bin"
 
 alias uv-daniel-run 'uv run --no-default-groups --group daniel'
+
+alias synth-midi 'fluidsynth -a alsa -m alsa_seq -l -i ~/roaming_linux_daniel/soundfonts/Yamaha-Grand-Lite-v2.0.sf2'
+alias scpdan-upload 'scp -r -i ~/.ssh/nyush_hpc_rsa $argv nq285@hpc.shanghai.nyu.edu:~/temp/'
+alias scpdan 'scp -r -i ~/.ssh/nyush_hpc_rsa nq285@hpc.shanghai.nyu.edu:$argv'
+# `scpdan remote_path local_path``
+function gpy
+    uv run --project ~/ground python $argv
+end
+# <<<<<<
