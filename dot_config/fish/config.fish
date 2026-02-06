@@ -206,7 +206,7 @@ fish_add_path "/home/dan/.local/bin"
 
 alias uv-daniel-run 'uv run --no-default-groups --group daniel'
 
-alias synth-midi 'fluidsynth -a alsa -m alsa_seq -l -i ~/roaming_linux_daniel/soundfonts/Yamaha-Grand-Lite-v2.0.sf2'
+alias synth-midi 'fluidsynth ~/roaming_linux_daniel/soundfonts/Yamaha-Grand-Lite-v2.0.sf2'
 alias scpdan-upload 'scp -r -i ~/.ssh/nyush_hpc_rsa $argv nq285@hpc.shanghai.nyu.edu:~/temp/'
 alias scpdan 'scp -r -i ~/.ssh/nyush_hpc_rsa nq285@hpc.shanghai.nyu.edu:$argv'
 # `scpdan remote_path local_path``
