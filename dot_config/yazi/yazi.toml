@@ -14,13 +14,13 @@ less = [
 
 [open]
 rules = [
-	{ name = "*/", use = [ "open", "edit", "reveal" ] },
+	{ url = "*/", use = [ "open", "edit", "reveal" ] },
 
-	{ name = "*.fish", use = [ "code", "execute", "open", "edit", "reveal" ] },
-	{ name = "*.py",   use = [ "code", "execute", "open", "edit", "reveal" ] },
-	{ name = "*.sh",   use = [ "code", "execute", "open", "edit", "reveal" ] },
+	{ url = "*.fish", use = [ "code", "execute", "open", "edit", "reveal" ] },
+	{ url = "*.py",   use = [ "code", "execute", "open", "edit", "reveal" ] },
+	{ url = "*.sh",   use = [ "code", "execute", "open", "edit", "reveal" ] },
 	
-	{ name = "*.xml",  use = [ "code", "open", "edit", "reveal" ] },
+	{ url = "*.xml",  use = [ "code", "open", "edit", "reveal" ] },
 
 	{ mime = "text/*",          use = [ "open", "edit", "reveal" ] },
 	{ mime = "image/*",         use = [ "open", "reveal" ] },
